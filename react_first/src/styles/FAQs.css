@@ -1,0 +1,154 @@
+.faq-hero {
+  background: linear-gradient(135deg, #7b1fa2 0%, #9c27b0 100%);
+  color: white;
+  padding: 48px 20px;
+  text-align: center;
+}
+.faq-hero h1 { font-size: 30px; font-weight: 700; font-family: Georgia, serif; margin-bottom: 10px; }
+.faq-hero p { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+.faq-search-wrap { max-width: 560px; margin: 0 auto; }
+.faq-search {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.faq-tabs {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 20px;
+}
+.faq-tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #eef0f8;
+  font-size: 13px;
+  font-family: inherit;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+.faq-tab:last-child { border-bottom: none; }
+.faq-tab:hover { background: #F8FAFF; color: #003580; }
+.faq-tab.active { background: #EEF6FF; color: #003580; font-weight: 700; border-left: 3px solid #003580; }
+.faq-tab-icon { font-size: 16px; }
+.faq-tab-count {
+  margin-left: auto;
+  background: #dde8ff;
+  color: #003580;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+.faq-tab.active .faq-tab-count { background: #003580; color: white; }
+
+.faq-list {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.faq-list h2 { font-size: 18px; font-weight: 700; color: #003580; font-family: Georgia, serif; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #FF9933; }
+
+.faq-item {
+  border: 1px solid #eef0f8;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.faq-item.open { border-color: #b3d4ff; }
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2340;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.faq-q:hover { background: #F8FAFF; }
+.faq-item.open .faq-q { background: #EEF6FF; color: #003580; }
+.faq-chevron { font-size: 11px; color: #4a5568; flex-shrink: 0; }
+
+.faq-a {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.7;
+  border-top: 1px solid #eef0f8;
+  background: #FAFBFF;
+  animation: fadeInUp 0.2s ease;
+}
+
+/* Search results */
+.faq-search-results { display: flex; flex-direction: column; gap: 12px; }
+.faq-search-results .faq-item.open { border-color: #b3d4ff; }
+.faq-search-results .faq-q { cursor: default; background: #EEF6FF; color: #003580; }
+.faq-cat-tag {
+  background: #dde8ff;
+  color: #003580;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.no-results { text-align: center; padding: 40px; color: #4a5568; background: white; border-radius: 8px; border: 1px solid #CBD5E1; }
+
+.faq-contact-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #00225A;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.faq-contact-bar a { color: #FFD700; text-decoration: none; font-weight: 600; }
+.faq-contact-bar a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-tabs { position: static; display: flex; overflow-x: auto; flex-wrap: nowrap; border-radius: 8px; }
+  .faq-tab { border-bottom: none; border-right: 1px solid #eef0f8; white-space: nowrap; flex-shrink: 0; }
+  .faq-tab.active { border-left: none; border-bottom: 3px solid #003580; }
+}

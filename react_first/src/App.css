@@ -1,0 +1,205 @@
+/* src/styles/App.css */
+:root {
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --green: #138808;
+  --navy: #003580;
+  --navy-dark: #00225A;
+  --navy-light: #1a4a8a;
+  --gold: #C8A400;
+  --gold-light: #FFD700;
+  --light-bg: #F0F4FF;
+  --border: #CBD5E1;
+  --text: #1a2340;
+  --text-muted: #4a5568;
+  --red: #C0392B;
+  --shadow: 0 2px 8px rgba(0,53,128,0.10);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans', 'Segoe UI', sans-serif;
+  background: #F0F4FF;
+  color: var(--text);
+  font-size: 14px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button { font-family: inherit; cursor: pointer; }
+
+input, select, textarea { font-family: inherit; }
+
+.btn-primary {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-primary:hover { background: #e07810; transform: translateY(-1px); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-secondary:hover { background: var(--navy); color: white; }
+
+.btn-gov {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.btn-gov:hover { background: var(--navy-light); }
+
+.btn-green {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-green:hover { background: #0f6a06; }
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  width: 100%;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-head h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, var(--navy), transparent);
+  border-radius: 2px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 13px;
+  background: #FAFBFF;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(0,53,128,0.08);
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.tag-all { background: #EEF6FF; color: var(--navy); border: 1px solid #b3d4ff; }
+.tag-obc { background: #FFF3E0; color: #b36200; border: 1px solid #ffd699; }
+.tag-sc  { background: #F3E5F5; color: #7b1fa2; border: 1px solid #d8a0e8; }
+.tag-minority { background: #E8F5E9; color: #1b5e20; border: 1px solid #81c784; }
+.tag-st { background: #FFF8E1; color: #6d4c00; border: 1px solid #ffd54f; }
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.alert-info { background: #EEF6FF; border: 1px solid #b3d4ff; color: #003580; }
+.alert-success { background: #E8F5E9; border: 1px solid #81c784; color: #1b5e20; }
+.alert-warning { background: #FFF8E1; border: 1px solid #f0d060; color: #6a4500; }
+.alert-error { background: #FFF0F0; border: 1px solid #ffc0c0; color: #c00; }
+
+@media (max-width: 900px) {
+  .main-content { padding: 20px 14px; }
+}
+
+/* OTP send spinner animation */
+@keyframes nsp-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

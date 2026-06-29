@@ -1,0 +1,62 @@
+/* Append track status styles */
+.track-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+.track-card { background: white; border: 1px solid #CBD5E1; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,53,128,0.08); }
+.track-card-head { background: linear-gradient(135deg, #003580, #1a5aaa); color: white; padding: 24px; }
+.track-card-head h2 { font-size: 20px; font-weight: 700; font-family: Georgia, serif; }
+.track-card-head p { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+.track-card-body { padding: 24px; }
+
+.track-result { margin-top: 20px; }
+.track-status-badge {
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+.track-timeline { margin: 16px 0; }
+.track-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eef0f8;
+}
+.track-step:last-child { border-bottom: none; }
+.track-dot {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.track-step.done .track-dot { background: #138808; color: white; }
+.track-step-info { flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.track-step-label { font-size: 13px; font-weight: 600; color: #1a2340; }
+.track-step.done .track-step-label { color: #138808; }
+.track-step-date { font-size: 11px; color: #4a5568; white-space: nowrap; }
+.track-amount {
+  background: #E8F5E9;
+  border: 1px solid #81c784;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #1b5e20;
+  margin-top: 12px;
+}
+.track-info-col { display: flex; flex-direction: column; gap: 0; }
+
+@media (max-width: 900px) {
+  .track-layout { grid-template-columns: 1fr; }
+}

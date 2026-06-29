@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.*
+
+# MongoDB
+mongodb_data/
+backend/mongodb_data/
+backend/db/
+backend/db_json/
+
+# Logs
+*.log
+server_log.txt
+
+# Build
+dist/
+build/

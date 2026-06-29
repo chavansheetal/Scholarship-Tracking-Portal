@@ -1,0 +1,173 @@
+.appform-header { margin-bottom: 20px; }
+.appform-header h2 { font-size: 22px; font-weight: 700; color: #00225A; font-family: Georgia, serif; }
+.appform-header p { font-size: 13px; color: #4a5568; margin-top: 4px; }
+
+.appform-steps {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.appform-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #4a5568;
+  background: white;
+  border: 1px solid #CBD5E1;
+  transition: all 0.2s;
+}
+.appform-step.active {
+  background: #EEF6FF;
+  color: #003580;
+  border-color: #003580;
+  font-weight: 600;
+}
+.appform-step.done {
+  background: #E8F5E9;
+  color: #1b5e20;
+  border-color: #81c784;
+}
+.appform-step-num {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.appform-step.active .appform-step-num { background: #003580; }
+.appform-step.done .appform-step-num { background: #138808; }
+
+.appform-card {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,53,128,0.08);
+}
+.appform-section { padding: 24px; }
+.appform-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00225A;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #FF9933;
+  font-family: Georgia, serif;
+}
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.appform-nav {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid #eef0f8;
+  background: #F8FAFF;
+  gap: 12px;
+}
+
+/* Preview */
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.preview-item {
+  background: #F8FAFF;
+  border: 1px solid #dde8ff;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.preview-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.4px; color: #4a5568; margin-bottom: 3px; }
+.preview-value { font-size: 14px; font-weight: 600; color: #1a2340; }
+
+.declaration-box {
+  background: #FFF8E1;
+  border: 1px solid #f0d060;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+.declaration-label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #6a4500;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.declaration-label input { margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Success */
+.submit-success {
+  background: white;
+  border: 1px solid #81c784;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,53,128,0.08);
+}
+.success-icon { font-size: 60px; margin-bottom: 16px; }
+.submit-success h2 { font-size: 24px; font-weight: 700; color: #1b5e20; font-family: Georgia, serif; margin-bottom: 10px; }
+.app-ref {
+  background: #E8F5E9;
+  border: 1px solid #81c784;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #1b5e20;
+  display: inline-block;
+  margin: 10px 0 16px;
+}
+.submit-success > p { font-size: 14px; color: #4a5568; margin-bottom: 24px; }
+.success-steps {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.succ-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #EEF6FF;
+  border: 1px solid #b3d4ff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  color: #003580;
+}
+.succ-step span {
+  width: 20px; height: 20px;
+  background: #003580;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.success-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+  .preview-grid { grid-template-columns: 1fr; }
+  .appform-steps { gap: 4px; }
+  .appform-step { padding: 6px 10px; font-size: 11px; }
+}

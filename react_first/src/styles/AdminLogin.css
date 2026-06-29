@@ -1,0 +1,111 @@
+.admin-auth-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,53,128,0.12);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+}
+
+.admin-auth-header {
+  background: linear-gradient(135deg, #00225A, #003580);
+  color: white;
+  padding: 28px 24px;
+  text-align: center;
+}
+.admin-auth-header h2 { font-size: 20px; font-weight: 700; font-family: Georgia, serif; }
+.admin-auth-header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+
+.admin-tabs {
+  display: flex;
+  border-bottom: 2px solid #eef0f8;
+}
+.admin-tab {
+  flex: 1;
+  padding: 12px 8px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-family: inherit;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  font-weight: 500;
+  text-align: center;
+}
+.admin-tab:hover { color: #003580; background: #F8FAFF; }
+.admin-tab.active { color: #003580; font-weight: 700; border-bottom-color: #FF9933; }
+
+.admin-body { padding: 20px 24px; }
+
+.admin-helpdesk {
+  background: #F0F4FF;
+  border-top: 1px solid #dde8ff;
+  padding: 12px 20px;
+  font-size: 12px;
+  color: #4a5568;
+  text-align: center;
+}
+
+/* ── Demo Credentials Box ── */
+.demo-creds-box {
+  background: #F0F8FF;
+  border: 1px solid #b3d4ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.demo-creds-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #003580;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.demo-creds-note {
+  font-size: 11px;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+.demo-cred-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #dde8ff;
+  flex-wrap: wrap;
+}
+.demo-cred-row:last-child { border-bottom: none; padding-bottom: 0; }
+.demo-cred-pair {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.demo-cred-key {
+  font-size: 11px;
+  color: #4a5568;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.demo-cred-val {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #003580;
+  background: #EEF6FF;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #b3d4ff;
+  letter-spacing: 0.5px;
+}
+.demo-cred-name {
+  font-size: 11px;
+  color: #4a5568;
+  font-style: italic;
+  margin-left: auto;
+}

@@ -1,0 +1,137 @@
+.profile-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-avatar-card {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 20px;
+}
+
+.profile-big-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #003580, #1a5aaa);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 auto 12px;
+}
+
+.profile-name { font-size: 16px; font-weight: 700; color: #003580; margin-bottom: 4px; }
+.profile-id { font-size: 11px; color: #4a5568; margin-bottom: 12px; font-family: monospace; }
+
+.profile-tags { margin-bottom: 14px; }
+
+.profile-contact {
+  text-align: left;
+  font-size: 12px;
+  color: #4a5568;
+  line-height: 2;
+  border-top: 1px solid #eef0f8;
+  padding-top: 12px;
+  margin-bottom: 16px;
+}
+
+.profile-completeness { text-align: left; }
+.complete-label { font-size: 11px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+.complete-bar {
+  height: 8px;
+  background: #eef0f8;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.complete-fill {
+  height: 100%;
+  background: linear-gradient(to right, #138808, #4caf50);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.complete-pct { font-size: 12px; font-weight: 700; color: #138808; }
+
+.profile-details { display: flex; flex-direction: column; gap: 20px; }
+
+.profile-section {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.profile-section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #003580;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #FF9933;
+  font-family: Georgia, serif;
+}
+
+.profile-section input:disabled,
+.profile-section select:disabled {
+  background: #F8FAFF;
+  color: #1a2340;
+  cursor: default;
+  border-color: transparent;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .profile-avatar-card { position: static; }
+  .form-row-2 { grid-template-columns: 1fr; }
+}
+
+/* ── Completeness missing fields ── */
+.complete-missing {
+  margin-top: 10px;
+  background: #FFF8E1;
+  border: 1px solid #f0d060;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+.complete-missing-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6a4500;
+  margin-bottom: 6px;
+}
+.complete-missing-item {
+  font-size: 11px;
+  color: #6a4500;
+  line-height: 1.8;
+}
+.complete-edit-btn {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  background: #FF9933;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+.complete-edit-btn:hover { background: #e07810; }

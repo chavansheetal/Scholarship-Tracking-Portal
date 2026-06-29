@@ -1,0 +1,249 @@
+/* ── HERO ── */
+.sch-page-hero {
+  background: linear-gradient(135deg, #00225A 0%, #003580 60%, #1a5aaa 100%);
+  color: white;
+  padding: 48px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.sch-page-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(255,153,51,0.15), transparent 70%);
+  border-radius: 50%;
+}
+.sch-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.sch-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,153,51,0.4);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  color: #ffcc80;
+  margin-bottom: 12px;
+}
+.sch-page-hero h1 { font-size: 28px; font-weight: 700; font-family: Georgia, serif; margin-bottom: 10px; }
+.sch-page-hero p { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+.sch-hero-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.sh-stat {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 12px;
+  text-align: center;
+}
+.sh-stat span {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFD700;
+  font-family: Georgia, serif;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+/* ── FILTERS ── */
+.sch-filters {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sch-search {
+  width: 100%;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.sch-search:focus { border-color: #003580; box-shadow: 0 0 0 3px rgba(0,53,128,0.08); }
+.filter-tabs { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.filter-label { font-size: 12px; font-weight: 600; color: #4a5568; white-space: nowrap; }
+.filter-tab {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  color: #4a5568;
+}
+.filter-tab:hover { border-color: #003580; color: #003580; }
+.filter-tab.active { background: #003580; color: white; border-color: #003580; }
+.level-select {
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #4a5568;
+  outline: none;
+}
+
+.sch-count { font-size: 13px; color: #4a5568; margin-bottom: 16px; }
+
+/* ── SCHOLARSHIP CARDS with ANIMATION ── */
+@keyframes cardSlideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sch-list { display: flex; flex-direction: column; gap: 12px; }
+
+.sch-list-card {
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardSlideIn 0.4s ease both;
+  position: relative;
+  overflow: hidden;
+}
+.sch-list-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: #CBD5E1;
+  transition: background 0.25s;
+}
+.sch-list-card.hovered {
+  border-color: #003580;
+  box-shadow: 0 8px 24px rgba(0,53,128,0.12);
+  transform: translateY(-2px);
+}
+.sch-list-card.hovered::before { background: #FF9933; }
+
+.sch-serial {
+  min-width: 36px;
+  height: 36px;
+  background: #EEF6FF;
+  border: 1px solid #b3d4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #003580;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.sch-list-card.hovered .sch-serial { background: #003580; color: white; border-color: #003580; }
+
+.sch-list-main { flex: 1; min-width: 0; }
+.sch-list-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.sch-ministry { font-size: 11px; color: #4a5568; }
+.sch-level-badge {
+  font-size: 10px;
+  background: #F0F4FF;
+  color: #003580;
+  border: 1px solid #dde8ff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.sch-list-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #003580;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.sch-list-card.hovered h3 { color: #001a40; }
+.sch-desc { font-size: 12px; color: #4a5568; line-height: 1.5; margin-bottom: 8px; }
+.sch-list-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.sch-list-meta span { font-size: 12px; color: #4a5568; }
+
+.sch-list-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 130px;
+}
+.sch-amount { text-align: right; }
+.sch-amount-label { font-size: 10px; color: #4a5568; text-transform: uppercase; letter-spacing: 0.4px; }
+.sch-amount-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #138808;
+  font-family: Georgia, serif;
+  transition: transform 0.2s;
+}
+.sch-list-card.hovered .sch-amount-value { transform: scale(1.05); }
+.btn-apply {
+  background: #FF9933;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  white-space: nowrap;
+}
+.btn-apply:hover { background: #e07810; transform: translateY(-1px); }
+.btn-details {
+  background: transparent;
+  color: #003580;
+  border: 1px solid #003580;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+}
+.btn-details:hover { background: #003580; color: white; }
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  color: #4a5568;
+}
+.no-results h3 { font-size: 18px; color: #003580; margin-bottom: 8px; }
+
+@media (max-width: 700px) {
+  .sch-list-card { flex-direction: column; align-items: flex-start; }
+  .sch-list-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .sch-serial { display: none; }
+}

@@ -1,0 +1,108 @@
+.student-sidebar {
+  width: 240px;
+  background: #00225A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.15);
+}
+
+.sidebar-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FF9933;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sidebar-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sidebar-id {
+  color: #adc8ff;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 12px 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  color: #b8d0f0;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.15s, color 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: rgba(255,153,51,0.15);
+  color: #FF9933;
+  border-left-color: #FF9933;
+  font-weight: 600;
+}
+
+.sidebar-icon { font-size: 16px; width: 20px; text-align: center; }
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logout {
+  width: 100%;
+  background: rgba(192,57,43,0.2);
+  color: #ff8888;
+  border: 1px solid rgba(192,57,43,0.3);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 12px;
+}
+.sidebar-logout:hover { background: rgba(192,57,43,0.4); }
+
+.sidebar-helpline {
+  color: #7090b0;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .student-sidebar { width: 100%; min-height: unset; flex-direction: row; flex-wrap: wrap; }
+  .sidebar-nav { display: flex; overflow-x: auto; padding: 4px 0; }
+  .sidebar-link { white-space: nowrap; border-left: none; border-bottom: 3px solid transparent; }
+  .sidebar-link.active { border-bottom-color: #FF9933; border-left-color: transparent; }
+  .sidebar-footer { display: none; }
+  .sidebar-profile { padding: 12px; }
+}
