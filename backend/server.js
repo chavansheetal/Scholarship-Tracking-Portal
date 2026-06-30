@@ -32,9 +32,10 @@ async function startAndConnectDb() {
       }
     })
     .catch(err => {
-      console.log('✅ Connected to MongoDB (JSON database active)');
-      activateMockMode();
-    });
+  console.error('❌ MongoDB connection failed:', err.message);
+  console.log('⚠️ Switching to JSON fallback database.');
+  activateMockMode();
+});
 }
 
 startAndConnectDb();
