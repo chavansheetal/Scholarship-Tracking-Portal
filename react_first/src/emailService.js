@@ -29,9 +29,16 @@ export const sendOTPEmail = async (email, otp) => {
     console.log("Email successfully sent!", response.status, response.text);
     return { success: true, response };
   } catch (error) {
-    console.error("EmailJS error:", error);
+    console.error("EmailJS Full Error:", error);
+
+    if (error.text) {
+        console.log("Error Text:", error.text);
+    }
+
+    alert(JSON.stringify(error));
+
     return { success: false, error };
-  }
+}
 };
 
 export const sendApplicationConfirmationEmail = async (studentEmail, details) => {
