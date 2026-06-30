@@ -244,7 +244,7 @@ export default function Register({ onLogin }) {
     // --- CHECK FOR DUPLICATE BEFORE SENDING OTP ---
     try {
       setSending(true);
-      setError("⏳ Checking records, please wait...");
+      setError(" please wait...");
       const dupRes = await checkDuplicate(form.email, form.mobile);
       if (dupRes && dupRes.exists) {
         setDuplicateInfo({
@@ -264,7 +264,7 @@ export default function Register({ onLogin }) {
 
     try {
       setSending(true);
-      setError("⏳ Sending OTP to your email, please wait...");
+      setError(" Sending OTP to your email, please wait...");
       // Generate email OTP for verification
       const otp = String(Math.floor(100000 + Math.random() * 900000));
       setEmailOtp(otp);
