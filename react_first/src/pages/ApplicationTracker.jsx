@@ -556,7 +556,7 @@ export default function ApplicationTracker({ user, onLogout }) {
             <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
               {backendStatus === "offline" && (
                 <div style={{ padding: "6px 12px", background: "#FEF2F2", border: "1px solid #FECACA", borderRadius: 6, color: "#991B1B", fontSize: 12, fontWeight: 600 }}>
-                  ⚠️ Backend Offline (Check Terminal)
+                  📍Stay informed at every step.
                 </div>
               )}
             </div>
